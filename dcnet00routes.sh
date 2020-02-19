@@ -3,7 +3,7 @@ sudo ip link add dev veth1 type veth peer name veth0
 sudo ip link set veth0 netns host1
 
 sudo ip netns exec host1 ip link add dev virbr0 type bridge 
-sudo ip netns exec host1 ip link set eno1 master virbr0
+sudo ip netns exec host1 ip link set eno2 master virbr0
 sudo ip netns exec host1 ip link set veth0 master virbr0
 sudo ip netns exec host1 ip link set virbr0 up
 sudo ip netns exec host1 ip link set veth0 up
