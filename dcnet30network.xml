@@ -1,0 +1,6 @@
+<network>
+  <name>dcnet</name>
+  <bridge name="virbr3" />
+  <forward mode="route" />
+  <ip address="128.10.126.77" netmask="255.255.255.128" />
+</network>
