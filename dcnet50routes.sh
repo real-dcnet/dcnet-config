@@ -1,6 +1,6 @@
 sudo sysctl net.ipv4.ip_forward=1
 sudo ip link add dev veth5 type veth peer name veth0
-sudo ip link set veth0 netns host3
+sudo ip link set veth0 netns host5
 
 sudo ip netns exec host5 ip link add dev virbr0 type bridge 
 sudo ip netns exec host5 ip link set enp132s0f1 master virbr0
