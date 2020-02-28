@@ -1,5 +1,5 @@
-sudo ip netns exec host1 arping -U -I eno2 128.10.126.51 -w 5
-sudo ip netns exec host1 ping -c 5 128.10.126.51
+sudo arping -U -I virbr1 128.10.126.51 -w 5
+ping -c 5 128.10.126.52
 sudo ip netns exec host2 arping -U -I enp1s0f0 128.10.126.52 -w 5
 sudo ip netns exec host2 ping -c 5 128.10.126.51
 sudo ip netns exec host3 arping -U -I enp1s0f1 128.10.126.53 -w 5
